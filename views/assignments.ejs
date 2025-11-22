@@ -1,0 +1,76 @@
+<%- include('layout', { body: `
+    <h2 class="mb-4 text-center">All Assignments</h2>
+
+    <!-- Search Bar -->
+    <form method="GET" action="/assignments" class="mb-4 d-flex justify-content-center">
+        <input 
+            type="text" 
+            name="search" 
+            class="form-control w-50 me-2" 
+            placeholder="Search by course or title..."
+            value="${typeof search !== 'undefined' ? search : ''}"
+        >
+        <button class="btn btn-primary">Search</button>
+    </form>
+
+    <!-- Sorting Buttons -->
+    <div class="mb-3 d-flex justify-content-center gap-2">
+        <a href="/assignments?sort=dateAsc" class="btn btn-secondary btn-sm">Due Soon</a>
+        <a href="/assignments?sort=dateDesc" class="btn btn-secondary btn-sm">Due Latest</a>
+        <a href="/assignments?sort=priority" class="btn btn-secondary btn-sm">Priority</a>
+        <a href="/assignments?sort=alpha" class="btn btn-secondary btn-sm">A–Z</a>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="mb-4 d-flex justify-content-center gap-2">
+        <a href="/assignments" class="btn btn-outline-light btn-sm">All</a>
+        <a href="/assignments?priority=High" class="btn btn-outline-light btn-sm">High</a>
+        <a href="/assignments?priority=Medium" class="btn btn-outline-light btn-sm">Medium</a>
+        <a href="/assignments?priority=Low" class="btn btn-outline-light btn-sm">Low</a>
+    </div>
+
+    <!-- Count -->
+    <p class="text-center text-info mb-4">
+        Showing ${assignments.length} assignment(s)
+    </p>
+
+    <!-- Table -->
+    <table class="table table-bordered table-dark table-striped text-center">
+        <thead class="table-primary text-dark">
+            <tr>
+                <th>Course</th>
+                <th>Title</th>
+                <th>Due Date</th>
+                <th>Priority</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${assignments
+                .map(assignment => `
+                    <tr>
+                        <td>${assignment.course}</td>
+                        <td>${assignment.title}</td>
+                        <td>${new Date(assignment.dueDate).toDateString()}</td>
+                        <td>
+                            ${
+                                assignment.priority === 'High'
+                                    ? '<span class="badge bg-danger">High</span>'
+                                    : assignment.priority === 'Medium'
+                                    ? '<span class="badge bg-warning text-dark">Medium</span>'
+                                    : '<span class="badge bg-success">Low</span>'
+                            }
+                        </td>
+                        <td>
+                            <a href="/assignments/edit/${assignment._id}" class="btn btn-warning btn-sm">Edit</a>
+                            
+                            <form action="/assignments/delete/${assignment._id}?_method=DELETE" method="POST" class="d-inline">
+                                <button class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                `)
+                .join('')}
+        </tbody>
+    </table>
+` }) %>

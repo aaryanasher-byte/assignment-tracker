@@ -1,0 +1,34 @@
+/* Global Background Gradient */
+body {
+    background: linear-gradient(135deg, #0d1117, #1b2735);
+    color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Center Containers */
+.container {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(6px);
+}
+
+/* Tables */
+table {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Form Card */
+form {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.45);
+    padding: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
