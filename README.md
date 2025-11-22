@@ -1,70 +1,51 @@
-Aaryan Asher
-Assignment Tracker
+**Aaryan Asher**
+**Assignment Tracker**
 A web application that allows users to track and manage assignments. Users can add, view, edit, delete, and search assignments.
 
-Live Deployment
+**Live Deployment**
 https://assignment-tracker-1-0ka2.onrender.com
 
-GitHub Repository
+**GitHub Repository**
 https://github.com/aaryanasher-byte/assignment-tracker
 
-Features
-Add new assignments
+**Features**
+- Add new assignments
+
+- View assignments in a table
+
+- Edit existing assignments
+
+- Delete assignments
+
+- Search by course or title
+
+- Prevents selecting past dates
+
+- Priority levels (High, Medium, Low)
+
+- Fully deployed online
 
 
-View assignments in a table
+**Technologies Used**
 
-
-Edit existing assignments
-
-
-Delete assignments
-
-
-Search by course or title
-
-
-Prevents selecting past dates
-
-
-Priority levels (High, Medium, Low)
-
-
-Fully deployed online
-
-
-
-Technologies Used
-Frontend
+**Frontend**
 HTML
-
-
 CSS
-
-
 Bootstrap
-
-
 EJS Templates
 
-
-Backend
+**Backend**
 Node.js
-
-
 Express.js
 
-
-Database
+**Database**
 MongoDB Atlas
 
-
-Deployment
+**Deployment**
 Render
 
 
-
-Project Structure
+**Project Structure**
 assignment-tracker/
 │
 ├── controllers/
@@ -77,53 +58,39 @@ assignment-tracker/
 └── .env
 
 
-Environment Variables
+**Environment Variables**
 Create a .env file in the project root with:
 MONGO_URI=your-mongodb-connection-string
 
 Do not upload .env to GitHub.
 
-Running the Project Locally
-Clone the repository:
 
-
+**Running the Project Locally**
+1. Clone the repository:
 git clone https://github.com/aaryanasher-byte/assignment-tracker
 
-Navigate into the folder:
-
-
+2. Navigate into the folder:
 cd assignment-tracker
 
-Install dependencies:
-
-
+3. Install dependencies:
 npm install
 
-Start the server:
-
-
+4. Start the server:
 npm start
 
-Open the app in a browser:
-
-
+5. Open the app in a browser:
 http://localhost:3000
 
 
-CRUD Breakdown
-Operation
-Function
-Create
-Add Assignment
-Read
-View Assignments
-Update
-Edit Assignment
-Delete
-Delete Assignment
+**CRUD Breakdown**
+Operation  Function
+Create  Add Assignment
+Read  View Assignments
+Update  Edit Assignment
+Delete  Delete Assignment
 
 
-Screenshots
+**Screenshots**
 Home page
 <img width="1916" height="1086" alt="image" src="https://github.com/user-attachments/assets/39dd0ece-6487-4085-af82-1ee32f20ddc8" /> 
 
@@ -138,6 +105,4 @@ Assignments list
 
 Edit page
 <img width="1919" height="1084" alt="image" src="https://github.com/user-attachments/assets/73f7cb83-78b6-4191-9d86-c89c81fc6fef" />
-(Switched Basketball and Gym)
-
-
+(Switched Basketball and Gym as an example)
