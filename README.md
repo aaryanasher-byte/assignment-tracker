@@ -94,15 +94,12 @@ Delete  Delete Assignment
 Home page
 <img width="1916" height="1086" alt="image" src="https://github.com/user-attachments/assets/39dd0ece-6487-4085-af82-1ee32f20ddc8" /> 
 
-
 Add Assignment page
 <img width="1914" height="1090" alt="image" src="https://github.com/user-attachments/assets/5c75e99e-626d-4aaa-99f7-ed8eb59294f1" />
-
 
 Assignments list
 <img width="1914" height="1086" alt="image" src="https://github.com/user-attachments/assets/9f931ef7-54a6-471c-af87-697e02b5156b" />
 
-
 Edit page
 <img width="1919" height="1084" alt="image" src="https://github.com/user-attachments/assets/73f7cb83-78b6-4191-9d86-c89c81fc6fef" />
-(Switched Basketball and Gym as an example)
+(Switched Basketball, Gym and data to December 4th as an example)
